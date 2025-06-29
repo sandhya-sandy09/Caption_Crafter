@@ -1,0 +1,8 @@
+streamlit
+Pillow
+transformers
+torch
+langchain
+langchain-community
+langchain-core
+langchain-ollama
