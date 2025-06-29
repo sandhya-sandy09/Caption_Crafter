@@ -52,7 +52,7 @@ def generate_caption_with_memory(mood: str, style: str, scene: str, user_thought
     
     style_note = style_instructions.get(style.lower(), "")
     
-    # Build the prompt
+    
     combined_input = f"""Create exactly {num} different Instagram captions.
 
     IMAGE DESCRIPTION: {scene}
@@ -77,7 +77,7 @@ REQUIREMENTS:
 
 Generate {num} captions:"""
 
-    # Use run with only the input parameter
+    
     output = caption_chain.run(input=combined_input)
 
     return [line.strip("•-1234567890. ") for line in output.strip().split("\n") if line.strip()]
